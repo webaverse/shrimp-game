@@ -171,7 +171,12 @@ export default () => {
                   if(o.name === "bridgeEnd") {
                     bridgeEnd = o;
                   }
+                  if(o.name === "Piggy") {
+                    const material = new THREE.MeshLambertMaterial( { color: 0xc47900, opacity: 0.8, transparent: true} );
+                    o.material = material;
+                  }
                   o.castShadow = true;
+                  //o.receiveShadow = true;
                 });
 
         const physicsId = physics.addGeometry(gltf.scene);
