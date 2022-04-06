@@ -348,6 +348,9 @@ export default () => {
         }
 
         if(gameState === 0 && mainDoor) {
+          if(localPlayer.position.y < -100) {
+            _changeGameState(0, 0);
+          }
           var distance = localPlayer.position.distanceTo(mainDoor.position);
           if (distance < 1) {
             _changeGameState(1, 500);
