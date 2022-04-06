@@ -65,7 +65,7 @@ export default () => {
     let positiveAudio = null;
 
     (async () => {
-        const u = `${baseUrl}/red-green/bridge-section/assets/stange.glb`; // must prefix "/bride-game" when working locally
+        const u = `${baseUrl}/bridge-section/assets/stange.glb`; // must prefix "/bride-game" when working locally
         let gltf = await new Promise((accept, reject) => {
             const {gltfLoader} = useLoaders();
             gltfLoader.load(u, accept, function onprogress() {}, reject);
@@ -191,27 +191,27 @@ export default () => {
         audioArray.push(greenAudio, redAudio, scanAudio, shotAudio, robotAudio);
 
          const audioLoader = new THREE.AudioLoader();
-         audioLoader.load( 'scenes/red-green/audio/Robot_Head2.wav', function( buffer ) {
+         audioLoader.load( 'https://webaverse.github.io/shrimp-game/audio/Robot_Head2.wav', function( buffer ) {
                 robotAudio.setBuffer( buffer );
                 robotAudio.setVolume( 0.07 );
           });
-          audioLoader.load( 'scenes/red-green/audio/Green.wav', function( buffer ) {
+          audioLoader.load( 'https://webaverse.github.io/shrimp-game/audio/Green.wav', function( buffer ) {
                 greenAudio.setBuffer( buffer );
                 greenAudio.setVolume( 2 );
           });
-          audioLoader.load( 'scenes/red-green/audio/Scanning.wav', function( buffer ) {
+          audioLoader.load( 'https://webaverse.github.io/shrimp-game/audio/Scanning.wav', function( buffer ) {
                 scanAudio.setBuffer( buffer );
                 scanAudio.setVolume( 0.2 );
           });
-          audioLoader.load( 'scenes/red-green/audio/Alarm.wav', function( buffer ) {
+          audioLoader.load( 'https://webaverse.github.io/shrimp-game/audio/Alarm.wav', function( buffer ) {
                 redAudio.setBuffer( buffer );
                 redAudio.setVolume( 0.5 );
           });
-          audioLoader.load( 'scenes/red-green/audio/shot.ogg', function( buffer ) {
+          audioLoader.load( 'https://webaverse.github.io/shrimp-game/audio/shot.ogg', function( buffer ) {
                 shotAudio.setBuffer( buffer );
                 shotAudio.setVolume( 1 );
           });
-          audioLoader.load( 'scenes/red-green/audio/positive.wav', function( buffer ) {
+          audioLoader.load( 'https://webaverse.github.io/shrimp-game/audio/positive.wav', function( buffer ) {
                 positiveAudio.setBuffer( buffer );
                 positiveAudio.setVolume( 1 );
           });
