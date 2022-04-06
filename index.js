@@ -136,7 +136,7 @@ export default () => {
         app.updateMatrixWorld();
     })();
     (async () => {
-        const u = `${baseUrl}/red-green/assets/wassiefirst.glb`; // must prefix "/bride-game" when working locally
+        const u = `${baseUrl}/assets/wassiefirst.glb`; // must prefix "/bride-game" when working locally
         let gltf = await new Promise((accept, reject) => {
             const {gltfLoader} = useLoaders();
             gltfLoader.load(u, accept, function onprogress() {}, reject);        
