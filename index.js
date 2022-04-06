@@ -347,7 +347,7 @@ export default () => {
             // works but has stutter when pressed       
         }
 
-        if(gameState === 0) {
+        if(gameState === 0 && mainDoor) {
           var distance = localPlayer.position.distanceTo(mainDoor.position);
           if (distance < 1) {
             _changeGameState(1, 500);
