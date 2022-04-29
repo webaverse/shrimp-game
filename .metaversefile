@@ -1,3 +1,4 @@
 {
+  "description": "shrimp-game",
   "start_url": "index.js"
 }
